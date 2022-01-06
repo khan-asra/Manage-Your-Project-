@@ -1,0 +1,236 @@
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+
+.logoclass{
+	border-top-width: 0px;
+	border-top-style: solid;
+	width: 76px;
+	height: 39.333px;}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+
+max-width:100%;
+	  max-height:30%;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: #561fce;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+
+#linkforteam{
+background-color: #561fce;
+color: black;
+text-align: center;
+padding: 12px;
+text-decoration: none;
+font-size: 18px;
+line-height: 25px;
+border-radius: 4px;
+text-decoration: none;
+	
+}
+
+
+.grid-container {
+  display: grid;
+  grid-gap: 2px;
+  padding: 5px;
+}
+
+.grid-item {
+  text-align: center;
+  padding: 5px;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+}
+
+input{
+  width: 40%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  width:190px;
+}
+
+
+input[type=submit] {
+  background-color: #561fce;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+}
+
+.heroimage{
+	width:550px;
+	height:400px;
+	 background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+   height: 50%;
+   text-align: left;
+	
+}
+
+
+.item2 {
+  grid-column: 1 ;
+  grid-row: 2 ;
+ 
+  
+  
+}
+
+.item3 {
+  grid-column: 2 /span 2;
+  grid-row: 2 /span 2;
+  
+}
+
+
+.item4{
+  grid-column: 1 ;
+  grid-row: 3 ;
+  text-align:left;
+  padding-left:40px;
+}
+
+
+.item5 {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+
+
+<!--  -->
+
+grid-container-assign-task{
+	
+  display: grid;
+  grid-gap: 2px;
+  padding: 5px;
+}
+
+
+.headerdiv {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+}
+
+
+
+
+
+
+
+
+
+
+.grid-maketeam {
+  text-align: center;
+  padding: 5px;
+  font-size: 30px;
+  justify-content:center;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}
+assignTeamForm{
+	
+  grid-column: 1 /span 3 ;
+  grid-row: 2 ;
+}
+
+
+
+
+
+
+
+
+table{
+
+	margin-left: auto; 
+  margin-right: auto;
+}
+	
+th, td {
+  border-style:solid;
+  border-color: black;
+  font-size:18px;
+}
+
+
+
+
+
+	
+	

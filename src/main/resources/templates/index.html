@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Tech UP</title>
+<script type="text/javascript" th:src="@{/js/mpscript.js}"></script>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/style/index.css}" />
+</head>
+<body>
+
+	<div class="grid-container">
+		<div class="grid-item item1">
+			<header class=header>
+
+				<a href="#default" class="logo"> <img alt="logo"
+					class="logoclass" th:src="@{/style/logo.png}">
+
+				</a>
+				<div class="header-right">
+					<a class="active" th:href='@{/}'>Home</a> <a href="#contact">Contact</a>
+					<a href="#about" th:href='@{/aboutus}'>About</a>
+				</div>
+
+
+			</header>
+		</div>
+
+		<div class="grid-item item2">
+			<div class="hero-image">
+				<img alt="homepage_hero" class="heroimage"
+					th:src="@{/style/herob.jpg}">
+				<div class="hero-text"></div>
+
+			</div>
+
+		</div>
+
+		<div class="grid-item item3">
+
+
+			<h3>Opportunity for any business challenge</h3>
+
+			<h4>We change our tools and then our tools change us.</h4>
+
+			<br>
+
+
+			<button  th:class="btnIndex" th:onclick="myFunction()">Make
+				Team</button>
+			<button th:class="btnIndex">
+				<a  th:id="btna" th:href='@{/addTask}'> Create Task </a>
+			</button>
+			<div th:id="myDIV">
+				<form action="#" th:action='@{/makeTeam}' th:method="Post"
+					th:object="${member}" th:id="makeTeamForm">
+
+					<h3>Make your team</h3>
+
+					<label>Members name</label> <input th:type="text"
+						th:name="nameOfMember" placeholder="Enter name seprated by comma">
+					<input type="submit" value="Team!">
+				</form>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script type="text/javascript" th:src="@{/js/mpscript.js}"></script>
+</body>
+</html>

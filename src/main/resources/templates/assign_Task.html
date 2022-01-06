@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Make your Team</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/style/stylesheet.css}" />
+</head>
+<body>
+
+
+
+	<div class="grid-container-assign-task">
+		<div class="grid-maketeam headerdiv">
+			<header class=header>
+
+				<a href="#default" class="logo"> <img alt="logo"
+					class="logoclass" th:src="@{/style/logo.png}">
+
+				</a>
+				<div class="header-right">
+					<a class="active" th:href='@{/}'>Home</a> <a href="#contact">Contact</a>
+					<a href="#about" th:href='@{/aboutus}'>About</a>
+				</div>
+
+
+			</header>
+		</div>
+
+		<div class="grid-maketeam  assignTeamForm"
+			th:style="'background:url('+ @{/style/sofaorange.jpg} +');'">
+
+
+			<div th:if="${membersList.empty== true and allTask.isEmpty()==true}">
+
+				<h2>
+					<a th:href="@{/} ">Add Members </a>
+				</h2>
+			</div>
+
+
+			<div th:unless="${membersList.empty== true and allTask.isEmpty==true}">
+				<h1>Assign task</h1>
+				<table>
+					<thead>
+					<h1>View Team</h1>
+						<tr>
+							<th>Member</th>
+							<th>Task</th>
+							<th>Status</th>
+							<th>Options</th>
+						</tr> 
+					</thead>
+					<tbody  >
+
+						<tr th:each="task:${allTask}">
+						
+						<td th:text="${task.taskHolder}"></td>
+						
+						<td th:text="${task.taskTitle}"></td>
+						
+						<td th:text="${task.task}"></td>
+						
+						<input th:text="${task.taskId}" th:value="taskId" hidden >
+						<td> <a th:href="@{/delete/}+ ${task.taskId}">Delete</a></td>
+						
+						
+						</tr>
+
+					</tbody>
+
+				</table>
+			</div>
+			<input type="submit" value="Go!">
+			<!--  	</form> -->
+		</div>
+		<div class="grid-item item3"></div>
+
+	</div>
+
+
+
+</body>
+</html>

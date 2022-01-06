@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Make your Team</title>
+</head>
+<body>
+
+
+	<form action="#" th:action="@{/} " method="get" th:object="${showMem}">
+
+
+		<div th:if="${membersList.empty}">
+			<h2>No Members</h2>
+		</div>
+
+		<div th:unless="${membersList.empty}">
+
+			<ul>
+				<li th:each="members: ${membersList}"
+					th:text="${members.memberName}"></li>
+
+			</ul>
+		</div>
+
+
+
+
+
+
+	</form>
+
+</body>
+</html>
